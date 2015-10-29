@@ -27,9 +27,8 @@ public class FairScheduler extends Scheduler{
 	}
 
 	@Override
-	public boolean doStep() {
+	public void doStep() {
 		// TODO Auto-generated method stub
-		return false;
 	}
 
 }
