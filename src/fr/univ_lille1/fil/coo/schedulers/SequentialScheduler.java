@@ -10,44 +10,25 @@ public class SequentialScheduler extends Scheduler{
 		super(actions);
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	@Override
 	public void nextAction() {
-		if(actions.size() == 0){
-			return;
-		}
-		if(actions.get(0).isFinished()){
+		if(actions.size() > 0 && actions.get(0).isFinished()){
 			remove();
+		}
+		if(actions.size() > 0){
+			actions.get(0).doStep();
 		}
 	}
 
 	@Override
 	public void doStep() {
 		nextAction();
-		actions.get(0).doStep();
 	}
 
 	@Override
 	public void remove() {
 		actions.remove(0);	
-	}
-
-	@Override
-	public boolean isReady() {
-		// TODO Stub de la méthode généré automatiquement
-		return false;
-	}
-
-	@Override
-	public boolean isInProgress() {
-		// TODO Stub de la méthode généré automatiquement
-		return false;
-	}
-
-	@Override
-	public boolean isFinished() {
-		// TODO Stub de la méthode généré automatiquement
-		return false;
 	}
 
 }
