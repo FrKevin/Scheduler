@@ -5,45 +5,35 @@ import java.util.List;
 import fr.univ_lille1.fil.coo.actions.Action;
 
 public class FairScheduler extends Scheduler{
-
+	private int numberOfRunAction = 0;
+	
 	public FairScheduler(List<Action> actions) {
 		super(actions);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void nextAction() {
-		// TODO Auto-generated method stub
-		
+		for(int i=numberOfRunAction; i>=0; i--){
+			actions.get(i).doStep();
+		}
+		if( numberOfRunAction < actions.size()){
+			numberOfRunAction++;
+		}
 	}
-
+	
 	@Override
 	public void doStep() {
-		// TODO Auto-generated method stub
-		
+		nextAction();
+		remove();
 	}
-
+	
 	@Override
 	public void remove() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean isReady() {
-		// TODO Stub de la méthode généré automatiquement
-		return false;
-	}
-
-	@Override
-	public boolean isInProgress() {
-		// TODO Stub de la méthode généré automatiquement
-		return false;
-	}
-
-	@Override
-	public boolean isFinished() {
-		// TODO Stub de la méthode généré automatiquement
-		return false;
+		for(int i=0; i<actions.size(); i++){
+			if(actions.get(i).isFinished()){
+				actions.remove(i);
+				numberOfRunAction--;
+			}
+		}
 	}
 }

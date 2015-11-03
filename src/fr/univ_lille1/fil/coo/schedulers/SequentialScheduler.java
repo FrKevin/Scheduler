@@ -12,16 +12,24 @@ public class SequentialScheduler extends Scheduler {
 		super(actions);
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	@Override
 	public void nextAction() {
+<<<<<<< HEAD
 
+=======
+		if(actions.size() > 0 && actions.get(0).isFinished()){
+			remove();
+		}
+		if(actions.size() > 0){
+			actions.get(0).doStep();
+		}
+>>>>>>> origin/master
 	}
 
 	@Override
 	public void doStep() {
 		nextAction();
-		actions.get(0).doStep();
 	}
 
 	@Override
@@ -29,6 +37,9 @@ public class SequentialScheduler extends Scheduler {
 		actions.remove(0);	
 	}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/master
 }
