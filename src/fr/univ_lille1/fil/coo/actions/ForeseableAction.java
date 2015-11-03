@@ -1,10 +1,10 @@
-package fr.univ_lille1.fil.coo.scheduler;
+package fr.univ_lille1.fil.coo.actions;
 
-public class ForeseableAction  extends Action{
+public class ForeseableAction extends Action {
 	protected int timeToEnd;
 	protected int time;
 	
-	public ForeseableAction(int timeToEnd){
+	public ForeseableAction(int timeToEnd) {
 		this.timeToEnd = timeToEnd;
 		time = 0;
 	}

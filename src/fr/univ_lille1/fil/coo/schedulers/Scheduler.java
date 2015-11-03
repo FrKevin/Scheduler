@@ -1,16 +1,18 @@
-package fr.univ_lille1.fil.coo.scheduler;
+package fr.univ_lille1.fil.coo.schedulers;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Scheduler{
-	protected List<Action> actions = new ArrayList<>();
+import fr.univ_lille1.fil.coo.actions.Action;
+
+public abstract class Scheduler extends Action {
 	
-	public Scheduler(List<Action> actions){
+	protected List<Action> actions;;
+	
+	public Scheduler(List<Action> actions) {
 		this.actions = actions;
 	}
 	
-	public void AddAction(Action a){
+	public void addAction(Action a) {
 		actions.add(a);
 	}
 	

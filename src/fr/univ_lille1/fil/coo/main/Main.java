@@ -1,4 +1,6 @@
-package fr.univ_lille1.fil.coo.scheduler;
+package fr.univ_lille1.fil.coo.main;
+
+import fr.univ_lille1.fil.coo.actions.ForeseableAction;
 
 public class Main {
 
