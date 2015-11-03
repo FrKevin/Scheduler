@@ -4,36 +4,44 @@ import java.util.List;
 
 import fr.univ_lille1.fil.coo.actions.Action;
 
-public class FairScheduler extends Scheduler{
-	private int numberOfRunAction = 0;
+public class FairScheduler extends Scheduler {
+	
+	public int idCurrentAction = 0;
+
 	
 	public FairScheduler(List<Action> actions) {
 		super(actions);
 	}
-
+	
+	public FairScheduler() {
+		super();
+	} 
+	
 	@Override
 	public void nextAction() {
-		for(int i=numberOfRunAction; i>=0; i--){
-			actions.get(i).doStep();
-		}
-		if( numberOfRunAction < actions.size()){
-			numberOfRunAction++;
+		if(idCurrentAction < actions.size() - 1) {
+			idCurrentAction++;
+		} 
+		else {
+			idCurrentAction = 0;
 		}
 	}
 	
 	@Override
 	public void doStep() {
+		setReady(false);
+		if(isFinished()) {
+			return;
+		}
+		actions.get(idCurrentAction).doStep();
+		if(actions.get(idCurrentAction).isFinished()) {
+			remove();
+		}
 		nextAction();
-		remove();
 	}
 	
 	@Override
 	public void remove() {
-		for(int i=0; i<actions.size(); i++){
-			if(actions.get(i).isFinished()){
-				actions.remove(i);
-				numberOfRunAction--;
-			}
-		}
+		actions.remove(idCurrentAction--);	
 	}
 }
