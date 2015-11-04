@@ -1,10 +1,10 @@
-package fr.univ_lille1.fil.coo.tests;
+package fr.univ_lille1.fil.coo.pool_scheduler.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import fr.univ_lille1.fil.coo.actions.ForeseableAction;
+import fr.univ_lille1.fil.coo.pool_scheduler.actions.ForeseableAction;
 
 public class TestForeseableAction {
 	

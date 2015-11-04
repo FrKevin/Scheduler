@@ -1,6 +1,6 @@
-package fr.univ_lille1.fil.coo.main;
+package fr.univ_lille1.fil.coo.pool_scheduler;
 
-import fr.univ_lille1.fil.coo.actions.ForeseableAction;
+import fr.univ_lille1.fil.coo.pool_scheduler.actions.ForeseableAction;
 
 public class Main {
 

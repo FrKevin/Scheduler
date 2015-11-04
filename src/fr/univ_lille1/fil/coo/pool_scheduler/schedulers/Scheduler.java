@@ -1,9 +1,9 @@
-package fr.univ_lille1.fil.coo.schedulers;
+package fr.univ_lille1.fil.coo.pool_scheduler.schedulers;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.univ_lille1.fil.coo.actions.Action;
+import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
 
 public abstract class Scheduler extends Action {
 	

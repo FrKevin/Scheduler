@@ -1,32 +1,25 @@
-package fr.univ_lille1.fil.coo.schedulers;
+package fr.univ_lille1.fil.coo.pool_scheduler.schedulers;
 
 import java.util.List;
 
-import fr.univ_lille1.fil.coo.actions.Action;
+import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
 
-public class FairScheduler extends Scheduler {
+public class SequentialScheduler extends Scheduler {
 	
-	public int idCurrentAction = 0;
-
+	private int idCurrentAction = 0;
 	
-	public FairScheduler(List<Action> actions) {
+	public SequentialScheduler(List<Action> actions) {
 		super(actions);
+		// TODO Auto-generated constructor stub
 	}
-	
-	public FairScheduler() {
-		super();
-	} 
 	
 	@Override
 	public void nextAction() {
 		if(idCurrentAction < actions.size() - 1) {
 			idCurrentAction++;
-		} 
-		else {
-			idCurrentAction = 0;
 		}
 	}
-	
+
 	@Override
 	public void doStep() {
 		setReady(false);
@@ -36,12 +29,14 @@ public class FairScheduler extends Scheduler {
 		actions.get(idCurrentAction).doStep();
 		if(actions.get(idCurrentAction).isFinished()) {
 			remove();
+			nextAction();
 		}
-		nextAction();
+		
 	}
-	
+
 	@Override
 	public void remove() {
 		actions.remove(idCurrentAction--);	
 	}
+
 }
