@@ -1,22 +1,8 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.schedulers;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
-
 public class FairScheduler extends Scheduler {
 	
-	public int idCurrentAction = 0;
-
-	
-	public FairScheduler(){
-		this(new ArrayList<>());
-	}
-	
-	public FairScheduler(List<Action> actions) {
-		super(actions);
-	}
+	public int idCurrentAction = 0;	
 	
 	@Override
 	public void nextAction() {

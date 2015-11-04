@@ -1,23 +1,20 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.schedulers;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
 
 public abstract class Scheduler extends Action {
 	
-	protected List<Action> actions;
-	protected boolean isReady;
-		
-	/**
-	 * Create Scheduler with list 
-	 * @param actions 
-	 */
-	public Scheduler(List<Action> actions) {
-		this.actions = actions;
-	}
+	protected List<Action> actions = new ArrayList<>();
+	protected boolean isReady = false;
 	
+	/**
+	 * Create empty Scheduler
+	 */
+	public Scheduler(){}	
 	
 	/**
 	 * Add action
@@ -30,6 +27,7 @@ public abstract class Scheduler extends Action {
 		if(isFinished()) {
 			throw new IllegalStateException("You can't add action on finished scheduler");
 		}
+		this.isReady = true;
 		actions.add(a);
 	}
 	
@@ -56,7 +54,9 @@ public abstract class Scheduler extends Action {
 	public boolean isFinished() {
 		return !isReady() && actions.isEmpty();
 	}
-	
 
-	
+
+	public List<Action> getActions() {
+		return actions;
+	}	
 }

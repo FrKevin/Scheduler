@@ -4,7 +4,15 @@ public class ForeseableAction  extends Action{
 	protected int timeToEnd;
 	protected int time;
 	
+	/**
+	 * Init ForeseableAction
+	 * @param timeToEnd the time for execute action
+	 * throw new IllegalArgumentException if timeToEnd = 0
+	 */
 	public ForeseableAction(int timeToEnd){
+		if(timeToEnd == 0){
+			throw new IllegalArgumentException("Can't add an already finished action");
+		}
 		this.timeToEnd = timeToEnd;
 		time = 0;
 	}
