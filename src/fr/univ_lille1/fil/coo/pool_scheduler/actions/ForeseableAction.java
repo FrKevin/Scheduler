@@ -49,7 +49,6 @@ public class ForeseableAction  extends Action{
 	
 	@Override
 	public String toString() {
-		// TODO Stub de la méthode généré automatiquement
 		return "Time : " + time + " TimeEnd : " + timeToEnd;
 	}
 	

@@ -25,10 +25,11 @@ public abstract class Scheduler extends Action {
 		if(a.isFinished()) {
 			throw new IllegalArgumentException("Can't add an already finished action");
 		}
+		
+		this.isInit = true;
 		if(isFinished()) {
 			throw new IllegalStateException("You can't add action on finished scheduler");
 		}
-		this.isInit = true;
 		actions.add(a);
 	}
 	
@@ -56,7 +57,7 @@ public abstract class Scheduler extends Action {
 
 	@Override
 	public boolean isFinished() {
-		return isInit && !isReady() && actions.isEmpty();
+		return !isReady() && actions.isEmpty();
 	}
 
 
