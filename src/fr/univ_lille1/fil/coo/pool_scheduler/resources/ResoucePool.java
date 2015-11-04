@@ -1,16 +1,16 @@
-package fr.univ_lille1.fil.coo.pool_scheduler.ressources;
+package fr.univ_lille1.fil.coo.pool_scheduler.resources;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
-public abstract class RessoucePool<T extends Ressource> {
+public abstract class ResoucePool<T extends Resource> {
 
 	public int numberRessources;
 	public ArrayList<T> ressources = new ArrayList<>();
 	public ArrayList<T> usedRessources = new ArrayList<>();
 	
 
-	public Ressource provideResspurce(Ressource r){
+	public Resource provideRessource(Resource r){
 		int index = ressources.indexOf(r);
 		if(index > -1 ){
 			return ressources.get(index);
@@ -20,7 +20,7 @@ public abstract class RessoucePool<T extends Ressource> {
 		}
 	}
 	
-	public void freeRessource(Ressource r){
+	public void freeRessource(Resource r){
 		int index = ressources.indexOf(r);
 		if(index > -1 ){
 			usedRessources.add(ressources.get(index));
