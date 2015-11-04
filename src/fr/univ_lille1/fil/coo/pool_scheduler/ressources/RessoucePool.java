@@ -8,7 +8,7 @@ public abstract class RessoucePool<T extends Ressource> {
 	public ArrayList<T> ressources = new ArrayList<>();
 	public ArrayList<T> usedRessources = new ArrayList<>();
 	
-	public Ressource provideResspurce(Ressource r){
+	public Ressource provideRessource(Ressource r){
 		int index = ressources.indexOf(r);
 		if(index > -1 ){
 			return ressources.get(index);
