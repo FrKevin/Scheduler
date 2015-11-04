@@ -38,7 +38,10 @@ public abstract class Scheduler extends Action {
 	 * 	Remove all action are finished
 	 */
 	public abstract void remove();
-
+	
+	
+	public abstract Action getCurrentAction();
+	
 	
 	@Override
 	public boolean isReady() {

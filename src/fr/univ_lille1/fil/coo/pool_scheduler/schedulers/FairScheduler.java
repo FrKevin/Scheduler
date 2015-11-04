@@ -31,4 +31,11 @@ public class FairScheduler extends Scheduler {
 	public void remove() {
 		actions.remove(idCurrentAction--);	
 	}
+
+	@Override
+	public Action getCurrentAction() {
+		// TODO Stub de la méthode généré automatiquement
+		System.err.println("Not implemented");
+		return null;
+	}
 }
