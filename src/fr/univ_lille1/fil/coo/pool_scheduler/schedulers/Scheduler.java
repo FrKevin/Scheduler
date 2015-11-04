@@ -9,7 +9,8 @@ import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
 public abstract class Scheduler extends Action {
 	
 	protected List<Action> actions = new ArrayList<>();
-	protected boolean isReady = false;
+	protected boolean isReady = true;
+	protected boolean isInit = false;
 	
 	/**
 	 * Create empty Scheduler
@@ -27,7 +28,7 @@ public abstract class Scheduler extends Action {
 		if(isFinished()) {
 			throw new IllegalStateException("You can't add action on finished scheduler");
 		}
-		this.isReady = true;
+		this.isInit = true;
 		actions.add(a);
 	}
 	
@@ -45,17 +46,17 @@ public abstract class Scheduler extends Action {
 	
 	@Override
 	public boolean isReady() {
-		return isReady;
+		return isInit && isReady;
 	}
 
 	@Override
 	public boolean isInProgress() {
-		return !isReady() && !isFinished();
+		return isInit && !isReady() && !isFinished();
 	}
 
 	@Override
 	public boolean isFinished() {
-		return !isReady() && actions.isEmpty();
+		return isInit && !isReady() && actions.isEmpty();
 	}
 
 
