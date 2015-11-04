@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 public abstract class RessoucePool<T extends Ressource> {
+
 	public int numberRessources;
 	public ArrayList<T> ressources = new ArrayList<>();
 	public ArrayList<T> usedRessources = new ArrayList<>();

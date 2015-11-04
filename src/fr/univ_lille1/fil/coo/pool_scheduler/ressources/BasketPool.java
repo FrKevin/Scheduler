@@ -1,5 +1,6 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.ressources;
 
-public class BasketPool {
+
+public abstract class BasketPool extends RessoucePool<Basket> {
 
 }
