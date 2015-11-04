@@ -1,4 +1,4 @@
-package fr.univ_lille1.fil.coo.pool_ressource;
+package fr.univ_lille1.fil.coo.pool_scheduler.ressources;
 
 import java.util.ArrayList;
 
