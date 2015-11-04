@@ -4,13 +4,16 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.Resource;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcePool;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 
-public class TakeRessourceAction<R extends Resource> extends ResourceAction<R>{
+public abstract class ResourceAction<R extends Resource> extends Action {
 
-	public TakeRessourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool) {
-		super(resourcefulUser, resourcePool);
-		// TODO Stub du constructeur généré automatiquement
+	protected ResourcefulUser<R> resourcefulUser;
+	protected ResourcePool<R> resourcePool;
+	
+	public ResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool) {
+		this.resourcefulUser = resourcefulUser;
+		this.resourcePool = resourcePool;
 	}
-
+	
 	@Override
 	public boolean isReady() {
 		// TODO Auto-generated method stub
@@ -28,11 +31,4 @@ public class TakeRessourceAction<R extends Resource> extends ResourceAction<R>{
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-	@Override
-	public void doStep() {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

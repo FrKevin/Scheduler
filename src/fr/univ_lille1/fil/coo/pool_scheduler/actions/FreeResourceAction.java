@@ -1,23 +1,14 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.actions;
 
-public class FreeResourceAction extends Action{
+import fr.univ_lille1.fil.coo.pool_scheduler.resources.Resource;
+import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcePool;
+import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 
-	@Override
-	public boolean isReady() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 
-	@Override
-	public boolean isInProgress() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isFinished() {
-		// TODO Auto-generated method stub
-		return false;
+	public FreeResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool) {
+		super(resourcefulUser, resourcePool);
+		// TODO Stub du constructeur généré automatiquement
 	}
 
 	@Override
