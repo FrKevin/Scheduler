@@ -39,4 +39,13 @@ public class SequentialScheduler extends Scheduler {
 		actions.remove(idCurrentAction--);	
 	}
 
+	@Override
+	public Action getCurrentAction() {
+		// TODO Stub de la méthode généré automatiquement
+		if(isFinished()) {
+			return null;
+		}
+		return actions.get(idCurrentAction);
+	}
+
 }

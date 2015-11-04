@@ -35,6 +35,9 @@ public abstract class Scheduler extends Action {
 	 */
 	public abstract void remove();
 	
+	
+	public abstract Action getCurrentAction();
+	
 	public void setReady(boolean isReady) {
 		this.isReady = isReady;
 	}
