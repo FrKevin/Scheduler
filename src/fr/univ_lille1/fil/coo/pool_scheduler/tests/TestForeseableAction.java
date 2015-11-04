@@ -22,7 +22,20 @@ public class TestForeseableAction {
 		assertFalse(action.isInProgress());
 		assertFalse(action.isFinished());
 	}
-
+	
+	@Test
+	public void testDoStep() {
+		ForeseableAction action = new ForeseableAction(2);
+		action.doStep();
+		assertFalse(action.isFinished());
+		assertTrue(action.isInProgress());
+		assertFalse(action.isReady());
+		action.doStep();
+		assertTrue(action.isFinished());
+		assertFalse(action.isInProgress());
+		assertFalse(action.isReady());
+	}
+	
 	@Test
 	public void testIsInProgress() {
 		ForeseableAction action = new ForeseableAction(2);
@@ -34,11 +47,12 @@ public class TestForeseableAction {
 
 	@Test
 	public void testIsFinished() {
-		fail("Not yet implemented");
+		ForeseableAction action = new ForeseableAction(2);
+		action.doStep();
+		action.doStep();
+		assertTrue(action.isFinished());
+		assertFalse(action.isInProgress());
+		assertFalse(action.isReady());
 	}
 
-	@Test
-	public void testDoStep() {
-		fail("Not yet implemented");
-	}
 }

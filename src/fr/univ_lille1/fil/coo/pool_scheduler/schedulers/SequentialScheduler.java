@@ -1,5 +1,6 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.schedulers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
@@ -8,9 +9,12 @@ public class SequentialScheduler extends Scheduler {
 	
 	private int idCurrentAction = 0;
 	
+	public SequentialScheduler(){
+		this(new ArrayList<>());
+	}
+	
 	public SequentialScheduler(List<Action> actions) {
 		super(actions);
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
@@ -22,7 +26,7 @@ public class SequentialScheduler extends Scheduler {
 
 	@Override
 	public void doStep() {
-		setReady(false);
+		this.isReady = false;
 		if(isFinished()) {
 			return;
 		}

@@ -1,6 +1,6 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.schedulers;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
@@ -8,16 +8,21 @@ import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
 public abstract class Scheduler extends Action {
 	
 	protected List<Action> actions;
-	private boolean isReady;
+	protected boolean isReady;
 		
+	/**
+	 * Create Scheduler with list 
+	 * @param actions 
+	 */
 	public Scheduler(List<Action> actions) {
 		this.actions = actions;
 	}
 	
-	public Scheduler() {
-		this(new ArrayList<>());
-	}
 	
+	/**
+	 * Add action
+	 * @param a Action
+	 */
 	public void addAction(Action a){
 		if(a.isFinished()) {
 			throw new IllegalArgumentException("Can't add an already finished action");
@@ -29,37 +34,29 @@ public abstract class Scheduler extends Action {
 	}
 	
 
-	public abstract void nextAction();	
+	public abstract void nextAction();
+	
 	/**
-	 * 	Remove all action finished
+	 * 	Remove all action are finished
 	 */
 	public abstract void remove();
 	
 	
 	public abstract Action getCurrentAction();
 	
-	public void setReady(boolean isReady) {
-		this.isReady = isReady;
-	}
 	
 	@Override
 	public boolean isReady() {
-		// TODO Stub de la méthode généré automatiquement
 		return isReady;
 	}
 
 	@Override
 	public boolean isInProgress() {
-		// TODO Stub de la méthode généré automatiquement
 		return !isReady() && !isFinished();
 	}
 
 	@Override
 	public boolean isFinished() {
-		// TODO Stub de la méthode généré automatiquement
 		return !isReady() && actions.isEmpty();
 	}
-	
-
-	
 }
