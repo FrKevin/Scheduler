@@ -1,5 +1,7 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.schedulers;
 
+import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
+
 public class SequentialScheduler extends Scheduler {
 	
 	private int idCurrentAction = 0;
@@ -33,7 +35,6 @@ public class SequentialScheduler extends Scheduler {
 
 	@Override
 	public Action getCurrentAction() {
-		// TODO Stub de la méthode généré automatiquement
 		if(isFinished()) {
 			return null;
 		}
