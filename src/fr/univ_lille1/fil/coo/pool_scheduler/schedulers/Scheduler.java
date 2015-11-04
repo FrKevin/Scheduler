@@ -8,7 +8,7 @@ import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
 public abstract class Scheduler extends Action {
 	
 	protected List<Action> actions;
-	protected boolean isReady;
+	protected boolean isReady = true;
 		
 	/**
 	 * Create Scheduler with list 
