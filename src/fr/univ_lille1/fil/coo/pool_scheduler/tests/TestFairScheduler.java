@@ -13,7 +13,7 @@ import fr.univ_lille1.fil.coo.pool_scheduler.schedulers.Scheduler;
 public class TestFairScheduler {
 	
 	
-	Scheduler scheduler;
+	FairScheduler scheduler;
 	
 	/**
 	 * @throws java.lang.Exception
@@ -21,10 +21,6 @@ public class TestFairScheduler {
 	@Before
 	public void setUp() throws Exception {
 		scheduler = new FairScheduler();
-		scheduler.addAction(new ForeseableAction(2));
-		scheduler.addAction(new ForeseableAction(3));
-		scheduler.addAction(new ForeseableAction(1));
-		scheduler.addAction(new ForeseableAction(4));
 
 	}
 
@@ -39,22 +35,63 @@ public class TestFairScheduler {
 
 	@Test
 	public void testDoStep() {
-		fail("Pas encore implémenté");
+		scheduler.addAction(new ForeseableAction(2));
+		scheduler.addAction(new ForeseableAction(1));
+		assertFalse(scheduler.isFinished());
+		scheduler.doStep();
+		assertFalse(scheduler.isFinished());
+		scheduler.doStep();
+		assertFalse(scheduler.isFinished());
+		scheduler.doStep();
+		assertTrue(scheduler.isFinished());
 	}
 
 	@Test
 	public void testNextAction() {
-		fail("Pas encore implémenté");
+		ForeseableAction fa1 = new ForeseableAction(1);
+		ForeseableAction fa2 = new ForeseableAction(1);
+		ForeseableAction fa3 = new ForeseableAction(1);
+		scheduler.addAction(fa1);
+		scheduler.addAction(fa2);
+		assertEquals(fa1, scheduler.getCurrentAction());
+		scheduler.nextAction();
+		assertEquals(fa2, scheduler.getCurrentAction());
+		scheduler.nextAction();
+		assertEquals(fa1, scheduler.getCurrentAction());
+		scheduler.addAction(fa3);
+		scheduler.nextAction();
+		assertEquals(fa2, scheduler.getCurrentAction());
+		scheduler.nextAction();
+		assertEquals(fa3, scheduler.getCurrentAction());
+		
+		
+		
 	}
 
 	@Test
 	public void testRemove() {
-		fail("Pas encore implémenté");
+		scheduler.addAction(new ForeseableAction(1));
+		assertFalse(scheduler.isFinished());
+		scheduler.remove();
+		assertFalse(scheduler.isFinished());
+		scheduler.doStep();
+		/* Scheduler automatically remove action if it's finished during doStep()*/
+		assertTrue(scheduler.isFinished());
 	}
 
 	@Test
 	public void testGetCurrentAction() {
-		fail("Pas encore implémenté");
+		ForeseableAction fa1 = new ForeseableAction(1);
+		ForeseableAction fa2 = new ForeseableAction(1);
+		ForeseableAction fa3 = new ForeseableAction(1);
+		scheduler.addAction(fa1);
+		scheduler.addAction(fa2);
+		scheduler.addAction(fa3);
+		assertEquals(fa1, scheduler.getCurrentAction());
+		scheduler.nextAction();
+		assertEquals(fa2, scheduler.getCurrentAction());
+		scheduler.nextAction();
+		assertEquals(fa3, scheduler.getCurrentAction());
 	}
 
 }

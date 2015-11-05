@@ -36,7 +36,6 @@ public class FairScheduler extends Scheduler {
 
 	@Override
 	public Action getCurrentAction() {
-		System.err.println("Not implemented");
-		return null;
+		return actions.get(idCurrentAction);
 	}
 }
