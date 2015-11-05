@@ -36,6 +36,9 @@ public class FairScheduler extends Scheduler {
 
 	@Override
 	public Action getCurrentAction() {
+		if(isFinished()) {
+			return null;
+		}
 		return actions.get(idCurrentAction);
 	}
 }
