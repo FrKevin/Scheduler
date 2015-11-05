@@ -30,7 +30,7 @@ public class SequentialScheduler extends Scheduler {
 
 	@Override
 	public void remove() {
-		actions.remove(idCurrentAction--);	
+		actions.remove(idCurrentAction--);
 	}
 
 	@Override

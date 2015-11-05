@@ -2,22 +2,41 @@ package fr.univ_lille1.fil.coo.pool_scheduler.tests;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import fr.univ_lille1.fil.coo.pool_scheduler.actions.ForeseableAction;
 
 public class TestForeseableAction {
 	
+	ForeseableAction action;
+	
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+		action = new ForeseableAction(2);
+	}
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	
+	@After
+	public void tearDown() throws Exception {
+		action = null;
+	}
+	
 	@Test
 	public void testForeseableAction() {
-		ForeseableAction action = new ForeseableAction(2);
 		assertTrue(action.getTime() == 0);
 		assertTrue(action.getTimeToEnd() == 2);
 	}
 	
 	@Test
 	public void testIsReady() {
-		ForeseableAction action = new ForeseableAction(2);
 		assertTrue(action.isReady());
 		assertFalse(action.isInProgress());
 		assertFalse(action.isFinished());
@@ -25,7 +44,6 @@ public class TestForeseableAction {
 	
 	@Test
 	public void testDoStep() {
-		ForeseableAction action = new ForeseableAction(2);
 		action.doStep();
 		assertFalse(action.isFinished());
 		assertTrue(action.isInProgress());
@@ -38,7 +56,6 @@ public class TestForeseableAction {
 	
 	@Test
 	public void testIsInProgress() {
-		ForeseableAction action = new ForeseableAction(2);
 		action.doStep();
 		assertFalse(action.isFinished());
 		assertTrue(action.isInProgress());
@@ -47,7 +64,6 @@ public class TestForeseableAction {
 
 	@Test
 	public void testIsFinished() {
-		ForeseableAction action = new ForeseableAction(2);
 		action.doStep();
 		action.doStep();
 		assertTrue(action.isFinished());
