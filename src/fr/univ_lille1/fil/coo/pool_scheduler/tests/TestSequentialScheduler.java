@@ -12,7 +12,7 @@ import fr.univ_lille1.fil.coo.pool_scheduler.schedulers.SequentialScheduler;
 
 public class TestSequentialScheduler {
 	
-	SequentialScheduler scheduler;
+	private SequentialScheduler scheduler;
 	
 	/**
 	 * @throws java.lang.Exception
@@ -25,7 +25,6 @@ public class TestSequentialScheduler {
 	/**
 	 * @throws java.lang.Exception
 	 */
-	
 	@After
 	public void tearDown() throws Exception {
 		scheduler = null;

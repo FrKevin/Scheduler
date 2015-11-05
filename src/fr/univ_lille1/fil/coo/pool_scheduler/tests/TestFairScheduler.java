@@ -10,9 +10,7 @@ import fr.univ_lille1.fil.coo.pool_scheduler.actions.ForeseableAction;
 import fr.univ_lille1.fil.coo.pool_scheduler.schedulers.FairScheduler;
 
 public class TestFairScheduler {
-	
-	
-	FairScheduler scheduler;
+	private FairScheduler scheduler;
 	
 	/**
 	 * @throws java.lang.Exception
@@ -26,7 +24,6 @@ public class TestFairScheduler {
 	/**
 	 * @throws java.lang.Exception
 	 */
-	
 	@After
 	public void tearDown() throws Exception {
 		scheduler = null;

@@ -5,12 +5,11 @@ import java.util.NoSuchElementException;
 
 public abstract class ResourcePool<T extends Resource> {
 
-	public int numberResources;
+	public int numberResources = 0;
 	public ArrayList<T> resources = new ArrayList<>();
 	public ArrayList<T> usedResources = new ArrayList<>();
 	
-	public Resource provideRessource(Resource r){
-
+	public Resource provideRessource(T r){
 		int index = resources.indexOf(r);
 		if(index > -1 ){
 			return resources.get(index);
@@ -20,14 +19,20 @@ public abstract class ResourcePool<T extends Resource> {
 		}
 	}
 	
-	public void freeRessource(Resource r){
+	public void freeRessource(T r){
 		int index = resources.indexOf(r);
 		if(index > -1 ){
 			usedResources.add(resources.get(index));
 			resources.remove(index);
+			numberResources--;
 		}
 		else{
 			throw new IllegalArgumentException("You can't add action on finished scheduler");
 		}
+	}
+	
+	public void addResource(T r){
+		resources.add(r);
+		numberResources++;
 	}
 }
