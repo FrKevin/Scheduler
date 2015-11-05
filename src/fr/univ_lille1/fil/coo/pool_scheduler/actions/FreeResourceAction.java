@@ -12,7 +12,10 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 
 	@Override
 	public void doStep() {
-		
+		if(resourcefulUser.getResource() != null) {
+			resourcePool.freeRessource(resourcefulUser.getResource());
+			resourcefulUser.resetResource();
+		}
 	}
 
 }
