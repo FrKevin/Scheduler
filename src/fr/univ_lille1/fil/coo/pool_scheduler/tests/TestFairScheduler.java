@@ -8,7 +8,6 @@ import org.junit.Test;
 
 import fr.univ_lille1.fil.coo.pool_scheduler.actions.ForeseableAction;
 import fr.univ_lille1.fil.coo.pool_scheduler.schedulers.FairScheduler;
-import fr.univ_lille1.fil.coo.pool_scheduler.schedulers.Scheduler;
 
 public class TestFairScheduler {
 	
