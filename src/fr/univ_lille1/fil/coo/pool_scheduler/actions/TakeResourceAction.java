@@ -8,6 +8,11 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	protected boolean takeResource = false;
 
+	/**
+	 * Action to affect a ressourcePool to an user
+	 * @param resourcefulUser the user who will have the ressourcePool
+	 * @param resourcePool the ressourcePool to affect to the user
+	 */
 	public TakeResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool) {
 		super(resourcefulUser, resourcePool);
 	}

@@ -6,6 +6,10 @@ import java.util.List;
 
 import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
 
+/**
+ * Class to manage a list of actions
+ *
+ */
 public abstract class Scheduler extends Action {
 	
 	protected List<Action> actions;

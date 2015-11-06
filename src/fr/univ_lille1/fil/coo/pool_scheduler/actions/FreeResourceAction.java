@@ -8,6 +8,11 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	public boolean freeRessource = false;
 	
+	/**
+	 * Init an action with the goal to free the ressourcePool to the specified user
+	 * @param resourcefulUser  the user to free to the ressourcePool
+	 * @param resourcePool the ressourcePool to remove from the user
+	 */
 	public FreeResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool) {
 		super(resourcefulUser, resourcePool);
 	}

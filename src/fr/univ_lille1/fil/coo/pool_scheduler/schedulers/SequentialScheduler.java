@@ -2,6 +2,10 @@ package fr.univ_lille1.fil.coo.pool_scheduler.schedulers;
 
 import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
 
+/**
+ * Execute a step of an action and go to another action each turn
+ *
+ */
 public class SequentialScheduler extends Scheduler {
 	
 	private int idCurrentAction = 0;

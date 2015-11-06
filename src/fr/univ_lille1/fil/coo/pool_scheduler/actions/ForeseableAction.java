@@ -5,7 +5,7 @@ public class ForeseableAction  extends Action{
 	protected int time;
 	
 	/**
-	 * Create an action whith a time to be finished
+	 * Create an action with a time to be finished
 	 * @param timeToEnd the time for execute action
 	 * throw new IllegalArgumentException if timeToEnd = 0
 	 */
