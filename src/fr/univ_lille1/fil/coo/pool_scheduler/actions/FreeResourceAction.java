@@ -5,7 +5,9 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcePool;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 
 public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
-
+	
+	public boolean freeRessource = false;
+	
 	public FreeResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool) {
 		super(resourcefulUser, resourcePool);
 	}
@@ -15,12 +17,13 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 		if(resourcefulUser.getResource() != null) {
 			resourcePool.freeRessource(resourcefulUser.getResource());
 			resourcefulUser.resetResource();
+			freeRessource = true;
 		}
 	}
 
 	@Override
 	public boolean isReady() {
-		return resourcefulUser != null && resourcefulUser.getResource() != null;
+		return freeRessource == false;
 	}
 
 	@Override
@@ -30,7 +33,7 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 
 	@Override
 	public boolean isFinished() {
-		return resourcefulUser.getResource() == null;
+		return freeRessource == true && resourcefulUser.getResource() == null;
 	}
 	
 	
