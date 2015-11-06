@@ -1,12 +1,11 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.actions;
 
-import java.util.List;
-
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.Basket;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.BasketPool;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.CubiclePool;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.cubicles.Cubicle;
+import fr.univ_lille1.fil.coo.pool_scheduler.schedulers.ScenarioScheduler;
 
 public class Swimmer extends Action {
 
@@ -21,49 +20,65 @@ public class Swimmer extends Action {
 	
 	protected ResourcefulUser<Cubicle> userCubicle;
 	protected ResourcefulUser<Basket> userBasket;
-	
-	protected boolean isReady = true;
-	
-	protected List<Action> scenarios;
+		
+	protected ScenarioScheduler scenarioScheduler;
 	
 	public Swimmer(String name, BasketPool basketPool, CubiclePool cubiclePool, int timeForUndress, int timeForSwim, int timeForDress) {
+		this(name, basketPool, cubiclePool, timeForUndress, timeForSwim, timeForDress, null);
+		this.scenarioScheduler = createScenarioScheduler();
+	}
+	
+	public Swimmer(String name, BasketPool basketPool, CubiclePool cubiclePool, int timeForUndress, int timeForSwim, int timeForDress, ScenarioScheduler scenarioScheduler) {
 		this.name = name;
 		this.basketPool = basketPool;
 		this.cubiclePool = cubiclePool;
 		this.timeForUndress = timeForUndress;
 		this.timeForSwim = timeForSwim;
 		this.timeForDress = timeForDress;
+		this.scenarioScheduler = scenarioScheduler;
 		
-		initScenarios();
 	}
-			
-	private void initScenarios(){
-		scenarios.add(new TakeResourceAction<Basket>(userBasket, basketPool));
-		scenarios.add(new TakeResourceAction<Cubicle>(userCubicle, cubiclePool));
 		
-		scenarios.add(new UnDressedAction(timeForUndress));
-		scenarios.add(new FreeResourceAction<>(userCubicle, cubiclePool));
-		scenarios.add(new ForeseableAction(timeForSwim));
+	protected ScenarioScheduler createScenarioScheduler(){
+		ScenarioScheduler resultscenarioScheduler = new ScenarioScheduler();
+		resultscenarioScheduler.addAction(new TakeResourceAction<>(userBasket, basketPool));
+		resultscenarioScheduler.addAction(new TakeResourceAction<>(userCubicle, cubiclePool));
+		resultscenarioScheduler.addAction(new UnDressedAction(timeForUndress));
+		resultscenarioScheduler.addAction(new FreeResourceAction<>(userCubicle, cubiclePool));
+		resultscenarioScheduler.addAction(new SwimAction(timeForSwim));
+		resultscenarioScheduler.addAction(new TakeResourceAction<Cubicle>(userCubicle, cubiclePool));
+		resultscenarioScheduler.addAction(new DressedAction(timeForDress));
+		resultscenarioScheduler.addAction(new FreeResourceAction<>(userCubicle, cubiclePool));
+		resultscenarioScheduler.addAction(new FreeResourceAction<>(userBasket, basketPool));
+		return resultscenarioScheduler;
 	}
 	
+	
+	public ScenarioScheduler getscenarioScheduler() {
+		return scenarioScheduler;
+	}
+
+	public void setscenarioScheduler(ScenarioScheduler scenarioScheduler) {
+		this.scenarioScheduler = scenarioScheduler;
+	}
+
 	@Override
 	public boolean isReady() {
-		return isReady;
+		return scenarioScheduler.isReady();
 	}
 
 	@Override
 	public boolean isInProgress() {
-		return !isReady() && !isFinished();
+		return scenarioScheduler.isInProgress();
 	}
 
 	@Override
 	public boolean isFinished() {
-		return !isReady() && scenarios.isEmpty();
+		return scenarioScheduler.isFinished();
 	}
 	
 	@Override
 	public void doStep() {
-		isReady = false;
-		
+		scenarioScheduler.doStep();
 	}
 }
