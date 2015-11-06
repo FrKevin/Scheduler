@@ -25,7 +25,7 @@ public class TestTakeResourceAction {
 		for(int i=0; i<3; i++){
 			cubicles.addResource(new Cubicle("cubiclePool "+ i));
 		}
-		takeResourceAction = new TakeResourceAction<>(new ResourcefulUser<Cubicle>(), cubicles);
+		takeResourceAction = new TakeResourceAction<>(new ResourcefulUser<Cubicle>(), cubicles, "tt");
 	}
 
 	/**
