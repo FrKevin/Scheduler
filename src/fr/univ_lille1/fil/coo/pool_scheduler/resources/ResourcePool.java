@@ -43,9 +43,10 @@ public abstract class ResourcePool<T extends Resource> {
 		int index = usedResources.indexOf(r);
 		if(index > -1 ){
 			usedResources.remove(index);
+			System.out.println("This ressource is unlocked.");
 		}
 		else{
-			throw new IllegalArgumentException("This ressource doesn't exists");
+			System.out.println("This ressource is not used.");
 		}
 	}
 	

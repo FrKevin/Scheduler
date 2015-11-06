@@ -67,7 +67,11 @@ public class TestResourcePool {
 	
 	@Test
 	public void testFreeRessource() {
-		fail("Not yet implemented");
+		Cubicle r = resourcePool.provideRessource(resourcePool.getFirstRessource());
+		assertNotNull(r);
+		assertTrue(resourcePool.getUsedResources().size() == 1);
+		resourcePool.freeRessource(r);
+		assertTrue(resourcePool.getUsedResources().size() == 0);
 	}
 
 
@@ -85,10 +89,4 @@ public class TestResourcePool {
 	public void testGetNUsedResource() {
 		assertTrue(resourcePool.getNUsedResource() == 0);
 	}
-
-	@Test
-	public void testGetFirstRessource() {
-		fail("Not yet implemented");
-	}
-
 }
