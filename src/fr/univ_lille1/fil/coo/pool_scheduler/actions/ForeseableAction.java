@@ -1,5 +1,10 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.actions;
 
+
+/**
+ * Action with time necessary to be considered as finished
+ *
+ */
 public class ForeseableAction  extends Action{
 	protected int timeToEnd;
 	protected int time;

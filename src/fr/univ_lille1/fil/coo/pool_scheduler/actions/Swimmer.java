@@ -7,6 +7,10 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.CubiclePool;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 import fr.univ_lille1.fil.coo.pool_scheduler.schedulers.ScenarioScheduler;
 
+/**
+ * Represent a swimmer
+ *
+ */
 public class Swimmer extends Action {
 
 	protected String name;
