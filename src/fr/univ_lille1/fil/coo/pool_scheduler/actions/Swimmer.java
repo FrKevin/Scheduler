@@ -39,7 +39,6 @@ public class Swimmer extends Action {
 	public Swimmer(String name, BasketPool basketPool, CubiclePool cubiclePool, int timeForUndress, int timeForSwim, int timeForDress) {
 		this.name = name;
 		this.basketPool = basketPool;
-		System.out.println();
 		this.cubiclePool = cubiclePool;
 		this.timeForUndress = timeForUndress;
 		this.timeForSwim = timeForSwim;

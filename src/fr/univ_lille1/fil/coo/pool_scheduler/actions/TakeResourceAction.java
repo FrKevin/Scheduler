@@ -50,7 +50,7 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	@Override
 	public boolean isInProgress() {
-		return isReady() && resourcefulUser.getResource() == null;
+		return !isReady() && !isFinished();
 	}
 	
 	@Override
