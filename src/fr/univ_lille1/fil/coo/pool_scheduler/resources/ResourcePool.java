@@ -8,8 +8,13 @@ public abstract class ResourcePool<T extends Resource> {
 
 	protected List<T> resources = new ArrayList<>();
 	protected List<T> usedResources = new ArrayList<>();
+	protected int capacity;
 	
-	public Resource provideRessource(T r){
+	public ResourcePool(int capacity){
+		this.capacity = capacity;
+	}
+	
+	public T provideRessource(T r){
 		int index = resources.indexOf(r);
 		if(index > -1 ){
 			return resources.get(index);
@@ -34,7 +39,12 @@ public abstract class ResourcePool<T extends Resource> {
 	}
 	
 	public void addResource(T r){
-		resources.add(r);
+		if(resources.size() < capacity-1) {
+			resources.add(r);
+		}
+		else{
+			throw new ArrayIndexOutOfBoundsException("max capacity for ResourcePool");
+		}
 	}
 	
 	public int getNTotalResource() {
@@ -47,5 +57,11 @@ public abstract class ResourcePool<T extends Resource> {
 	
 	public int getNUsedResource() {
 		return usedResources.size();
+	}
+	
+	public T getFirstRessource(){
+		if(resources.size() > 0 )
+			return resources.get(0);
+		return null;
 	}
 }

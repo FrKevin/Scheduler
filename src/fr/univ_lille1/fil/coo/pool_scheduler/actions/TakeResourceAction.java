@@ -7,20 +7,42 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	protected boolean takeResource = false;
-	
-	public boolean isTakeResource() {
-		return takeResource;
-	}
 
 	public TakeResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool) {
 		super(resourcefulUser, resourcePool);
 	}
-
+	
+	@Override
+	public boolean isReady() {
+		return takeResource == false;
+	}
+	
 	@Override
 	public void doStep() {
-		/* Voir la comprehension du sujet, si un resourcefulUser, a la ressource qu'il veut prendre */
-		
-		
+		if(resourcefulUser.getResource() != null ){
+			throw new IllegalAccessError("The resource of user is not null");
+		}
+		R resource = resourcePool.getFirstRessource();
+		if(resource != null){
+			try {
+				resource = resourcePool.provideRessource(resource);
+				resourcefulUser.setResource(resource);
+				takeResource = true;
+			} catch (Exception e) {
+			}
+		}
+		else{
+			System.out.println("to take resource from pool " + resourcefulUser.toString() + "... failded");
+		}
 	}
-
+	
+	@Override
+	public boolean isInProgress() {
+		return isReady() && resourcefulUser.getResource() == null;
+	}
+	
+	@Override
+	public boolean isFinished() {
+		return takeResource == true && resourcefulUser.getResource() != null;
+	}
 }

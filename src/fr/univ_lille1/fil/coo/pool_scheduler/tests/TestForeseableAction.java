@@ -10,7 +10,7 @@ import fr.univ_lille1.fil.coo.pool_scheduler.actions.ForeseableAction;
 
 public class TestForeseableAction {
 	
-	ForeseableAction action;
+	protected ForeseableAction action;
 	
 	/**
 	 * @throws java.lang.Exception

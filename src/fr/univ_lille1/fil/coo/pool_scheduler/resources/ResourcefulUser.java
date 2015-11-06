@@ -8,7 +8,7 @@ public class ResourcefulUser<R extends Resource> {
 		return resource;
 	}
 	
-	public void setRessource(R resource) {
+	public void setResource(R resource) {
 		this.resource = resource;
 	}
 	

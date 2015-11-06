@@ -12,7 +12,7 @@ import fr.univ_lille1.fil.coo.pool_scheduler.schedulers.SequentialScheduler;
 
 public class TestSequentialScheduler {
 	
-	private SequentialScheduler scheduler;
+	protected SequentialScheduler scheduler;
 	
 	/**
 	 * @throws java.lang.Exception
