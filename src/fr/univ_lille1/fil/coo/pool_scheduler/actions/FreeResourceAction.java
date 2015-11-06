@@ -18,4 +18,20 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 		}
 	}
 
+	@Override
+	public boolean isReady() {
+		return resourcefulUser != null && resourcefulUser.getResource() != null;
+	}
+
+	@Override
+	public boolean isInProgress() {
+		return !isReady() && !isFinished();
+	}
+
+	@Override
+	public boolean isFinished() {
+		return resourcefulUser.getResource() == null;
+	}
+	
+	
 }
