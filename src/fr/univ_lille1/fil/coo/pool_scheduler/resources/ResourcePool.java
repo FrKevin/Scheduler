@@ -5,9 +5,20 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 public abstract class ResourcePool<T extends Resource> {
-
+	
+	/**
+	 * The general ressource for pool
+	 */
 	protected List<T> resources = new ArrayList<>();
+	
+	/**
+	 * The used ressource
+	 */
 	protected List<T> usedResources = new ArrayList<>();
+	
+	/**
+	 * The capacity of pool
+	 */
 	protected int capacity;
 	
 	public ResourcePool(int capacity){
@@ -16,7 +27,8 @@ public abstract class ResourcePool<T extends Resource> {
 	
 	public T provideRessource(T r){
 		int index = resources.indexOf(r);
-		if(index > -1 ){
+		if(index > -1 && !usedResources.contains(r)){
+			usedResources.add(resources.get(index));
 			return resources.get(index);
 		}
 		else {
@@ -28,10 +40,9 @@ public abstract class ResourcePool<T extends Resource> {
 	}
 	
 	public void freeRessource(T r){
-		int index = resources.indexOf(r);
+		int index = usedResources.indexOf(r);
 		if(index > -1 ){
-			usedResources.add(resources.get(index));
-			resources.remove(index);
+			usedResources.remove(index);
 		}
 		else{
 			throw new IllegalArgumentException("This ressource doesn't exists");
@@ -47,6 +58,12 @@ public abstract class ResourcePool<T extends Resource> {
 		}
 	}
 	
+	public T getFirstRessource(){
+		if(resources.size() > 0 )
+			return resources.get(0);
+		return null;
+	}
+	
 	public int getNTotalResource() {
 		return getNAvailableResource() + getNUsedResource();
 	}
@@ -58,10 +75,17 @@ public abstract class ResourcePool<T extends Resource> {
 	public int getNUsedResource() {
 		return usedResources.size();
 	}
-	
-	public T getFirstRessource(){
-		if(resources.size() > 0 )
-			return resources.get(0);
-		return null;
+
+	public int getCapacity() {
+		return capacity;
 	}
+
+	public List<T> getResources() {
+		return resources;
+	}
+
+	public List<T> getUsedResources() {
+		return usedResources;
+	}
+	
 }
