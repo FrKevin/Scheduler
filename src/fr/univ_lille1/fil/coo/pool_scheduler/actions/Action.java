@@ -18,7 +18,7 @@ public abstract class Action {
 	
 	
 	/**
-	 * @return execute action
+	 * @return execute action of the class
 	 */
 	public abstract void doStep();
 }
