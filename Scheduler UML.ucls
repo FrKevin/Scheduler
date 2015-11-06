@@ -140,17 +140,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.RenderAction" project="Scheduler" 
-    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/RenderAction.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="187" width="183" x="476" y="650"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="16" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.Main" project="Scheduler" 
+  <class id="15" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.Main" project="Scheduler" 
     file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/Main.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="97" width="151" x="169" y="124"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -159,7 +149,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.Swimmer" project="Scheduler" 
+  <class id="16" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.Swimmer" project="Scheduler" 
     file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/Swimmer.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="259" width="264" x="699" y="650"/>    
@@ -169,7 +159,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.schedulers.SequentialScheduler" 
+  <class id="17" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.schedulers.SequentialScheduler" 
     project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/schedulers/SequentialScheduler.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="169" width="198" x="1323" y="441"/>    
@@ -179,7 +169,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.ResourceAction" project="Scheduler" 
+  <class id="18" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.ResourceAction" project="Scheduler" 
     file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/ResourceAction.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="79" width="299" x="1003" y="650"/>    
@@ -189,7 +179,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="20" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.DressedAction" project="Scheduler" 
+  <class id="19" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.DressedAction" project="Scheduler" 
     file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/DressedAction.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="97" width="183" x="2179" y="949"/>    
@@ -199,7 +189,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.ForeseableAction" 
+  <class id="20" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.ForeseableAction" 
     project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/ForeseableAction.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="241" width="183" x="1956" y="650"/>    
@@ -209,7 +199,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser" 
+  <class id="21" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser" 
     project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/resources/ResourcefulUser.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="133" width="194" x="484" y="949"/>    
@@ -219,7 +209,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.SwimAction" project="Scheduler" 
+  <class id="22" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.SwimAction" project="Scheduler" 
     file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/SwimAction.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="79" width="183" x="2068" y="1212"/>    
@@ -229,7 +219,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.ActionFinishedException" 
+  <class id="23" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.ActionFinishedException" 
     project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/ActionFinishedException.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="97" width="183" x="570" y="124"/>    
@@ -239,7 +229,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="25" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.schedulers.Scheduler" project="Scheduler" 
+  <class id="24" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.schedulers.Scheduler" project="Scheduler" 
     file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/schedulers/Scheduler.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="277" width="198" x="1003" y="124"/>    
@@ -249,181 +239,177 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="26">    
+  <association id="25">    
     <bendpoint x="708" y="949"/>    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="27" name="basketPool"/>      
-      <multiplicity id="28" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="26" name="basketPool"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="29">    
+  <association id="28">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="30" name="resources"/>      
-      <multiplicity id="31" minimum="0" maximum="2147483647"/>    
+      <attribute id="29" name="resources"/>      
+      <multiplicity id="30" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="32">    
-    <end type="SOURCE" refId="23"/>    
+  <generalization id="31">    
+    <end type="SOURCE" refId="22"/>    
     <end type="TARGET" refId="8"/>  
   </generalization>  
-  <realization id="33">    
+  <realization id="32">    
     <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="13"/>  
   </realization>  
-  <association id="34">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="35" name="resource"/>      
-      <multiplicity id="36" minimum="0" maximum="1"/>    
+  <association id="33">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="34" name="resource"/>      
+      <multiplicity id="35" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="37">    
+  <association id="36">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="38" name="clothing"/>      
-      <multiplicity id="39" minimum="0" maximum="2147483647"/>    
+      <attribute id="37" name="clothing"/>      
+      <multiplicity id="38" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="40">    
+  <generalization id="39">    
     <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="TARGET" refId="18"/>  
   </generalization>  
-  <realization id="41">    
+  <realization id="40">    
     <bendpoint x="219" y="949"/>    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="13"/>  
   </realization>  
-  <generalization id="42">    
+  <generalization id="41">    
     <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="25"/>  
+    <end type="TARGET" refId="24"/>  
   </generalization>  
-  <association id="43">    
-    <end type="SOURCE" refId="25" navigable="false">      
-      <attribute id="44" name="actions"/>      
-      <multiplicity id="45" minimum="0" maximum="2147483647"/>    
+  <association id="42">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="43" name="actions"/>      
+      <multiplicity id="44" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="46">    
+  <generalization id="45">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <generalization id="47">    
-    <end type="SOURCE" refId="21"/>    
+  <generalization id="46">    
+    <end type="SOURCE" refId="20"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <generalization id="48">    
+  <generalization id="47">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <generalization id="49">    
-    <end type="SOURCE" refId="17"/>    
+  <generalization id="48">    
+    <end type="SOURCE" refId="16"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <association id="50">    
+  <association id="49">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="51" name="usedResources"/>      
-      <multiplicity id="52" minimum="0" maximum="2147483647"/>    
+      <attribute id="50" name="usedResources"/>      
+      <multiplicity id="51" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="53">    
+  <realization id="52">    
     <end type="SOURCE" refId="14"/>    
     <end type="TARGET" refId="13"/>  
   </realization>  
-  <association id="54">    
+  <association id="53">    
     <bendpoint x="963" y="949"/>    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="55" name="cubiclePool"/>      
-      <multiplicity id="56" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="54" name="cubiclePool"/>      
+      <multiplicity id="55" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="57">    
-    <end type="SOURCE" refId="19"/>    
+  <generalization id="56">    
+    <end type="SOURCE" refId="18"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
+  <generalization id="57">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="24"/>  
+  </generalization>  
   <generalization id="58">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="25"/>  
-  </generalization>  
-  <generalization id="59">    
     <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="19"/>  
+    <end type="TARGET" refId="18"/>  
   </generalization>  
-  <association id="60">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="61" name="scenarioScheduler"/>      
-      <multiplicity id="62" minimum="0" maximum="1"/>    
+  <association id="59">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="60" name="scenarioScheduler"/>      
+      <multiplicity id="61" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="63">    
+  <generalization id="62">    
     <bendpoint x="1332" y="650"/>    
     <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="18"/>  
+    <end type="TARGET" refId="17"/>  
   </generalization>  
-  <generalization id="64">    
+  <generalization id="63">    
     <end type="SOURCE" refId="12"/>    
     <end type="TARGET" refId="8"/>  
   </generalization>  
-  <association id="65">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="66" name="userCubicle"/>      
-      <multiplicity id="67" minimum="0" maximum="1"/>    
+  <association id="64">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="65" name="userCubicle"/>      
+      <multiplicity id="66" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
+    <end type="TARGET" refId="21" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="68">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="21"/>  
+  <generalization id="67">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="20"/>  
   </generalization>  
-  <association id="69">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="70" name="userBasket"/>      
-      <multiplicity id="71" minimum="0" maximum="1"/>    
+  <association id="68">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="69" name="userBasket"/>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
+    <end type="TARGET" refId="21" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="72">    
-    <end type="SOURCE" refId="25"/>    
+  <generalization id="71">    
+    <end type="SOURCE" refId="24"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <generalization id="73">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <association id="74">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="75" name="resourcefulUser"/>      
-      <multiplicity id="76" minimum="0" maximum="1"/>    
+  <association id="72">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="73" name="resourcefulUser"/>      
+      <multiplicity id="74" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
+    <end type="TARGET" refId="21" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="77">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="78" name="resourcePool"/>      
-      <multiplicity id="79" minimum="0" maximum="1"/>    
+  <association id="75">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="76" name="resourcePool"/>      
+      <multiplicity id="77" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="80">    
+  <generalization id="78">    
     <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="21"/>  
+    <end type="TARGET" refId="20"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

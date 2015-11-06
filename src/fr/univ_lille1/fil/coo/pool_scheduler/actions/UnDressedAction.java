@@ -1,5 +1,9 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.actions;
 
+/**
+ * Class representing the udressing action
+ *
+ */
 public class UnDressedAction extends ScenarioAction{
 	
 	/**

@@ -1,5 +1,9 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.resources;
 
+/**
+ * Class representing a Cubicle
+ *
+ */
 public class Cubicle implements Resource {
 	
 	protected String description;

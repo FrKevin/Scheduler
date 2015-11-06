@@ -1,6 +1,10 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.actions;
 
-public class DressedAction extends ScenarioAction {
+/**
+ * Action about dressing someone
+ *
+ */
+public class DressedAction extends ScenarioAction{
 
 	/**
 	 * Action to dress clothes

@@ -1,5 +1,9 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.actions;
 
+/**
+ * Action using a message to be described
+ *
+ */
 public abstract class ScenarioAction extends ForeseableAction {
 	
 	protected String message;
