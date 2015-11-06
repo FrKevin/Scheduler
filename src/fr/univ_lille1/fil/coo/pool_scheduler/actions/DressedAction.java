@@ -1,6 +1,10 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.actions;
 
 public class DressedAction extends ScenarioAction {
+/**
+ * Action about dressing someone
+ *
+ */
 
 	/**
 	 * Action to dress clothes
@@ -9,6 +13,4 @@ public class DressedAction extends ScenarioAction {
 	public DressedAction(int timeToEnd) {
 		super(timeToEnd, "Dressing");
 	}
-
-
 }

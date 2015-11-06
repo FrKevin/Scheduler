@@ -1,9 +1,12 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.actions;
 
+/**
+ * Action using a message to be described
+ *
+ */
 public abstract class ScenarioAction extends ForeseableAction {
 	
 	protected String message;
-	
 	/**
 	 * Init an action with a message to describe it
 	 * @param timeToEnd the time like {@link ForeseableAction}
@@ -17,11 +20,11 @@ public abstract class ScenarioAction extends ForeseableAction {
 	@Override
 	public void doStep() {
 		super.doStep();
-		//System.out.println(this);
 	}
 	
 	@Override
 	public String toString() {
 		return message +" ("+time+"/"+timeToEnd+")";
+
 	}
 }

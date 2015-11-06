@@ -8,8 +8,6 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.Cubicle;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.CubiclePool;
 import fr.univ_lille1.fil.coo.pool_scheduler.schedulers.FairScheduler;
 
-//import fr.univ_lille1.fil.coo.pool_scheduler.actions.ForeseableAction;
-
 public class Main {
 
 	public static void main(String[] args) throws ActionFinishedException {

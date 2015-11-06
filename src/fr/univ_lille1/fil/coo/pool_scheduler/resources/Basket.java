@@ -5,6 +5,10 @@ import java.util.List;
 
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.clothing.Clothing;
 
+/**
+ * Class reprensenting a basket
+ *
+ */
 public class Basket implements Resource {
 	
 	protected List<Clothing> clothing = new ArrayList<>();
@@ -31,4 +35,9 @@ public class Basket implements Resource {
 	public String description() {
 		return description;
 	}
+
+	public List<Clothing> getClothing() {
+		return clothing;
+	}
+	
 }

@@ -4,6 +4,13 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.Resource;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcePool;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 
+
+/**
+ * 
+ * Class to put a ressource to an user
+ *
+ * @param <R> type of the ressource
+ */
 public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	protected boolean takeResource = false;
@@ -59,7 +66,7 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	@Override
 	public boolean isInProgress() {
-		return isReady() && resourcefulUser.getResource() == null;
+		return !isReady() && !isFinished();
 	}
 	
 	@Override

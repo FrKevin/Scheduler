@@ -4,6 +4,11 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.Resource;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcePool;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 
+/**
+ * Class to free a ressource to a user
+ *
+ * @param <R> type of ressource to manage
+ */
 public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	public boolean freeRessource = false;

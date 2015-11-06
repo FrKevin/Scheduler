@@ -7,6 +7,10 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.CubiclePool;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 import fr.univ_lille1.fil.coo.pool_scheduler.schedulers.ScenarioScheduler;
 
+/**
+ * Represent a swimmer
+ *
+ */
 public class Swimmer extends Action {
 
 	protected String name;
@@ -36,7 +40,6 @@ public class Swimmer extends Action {
 	public Swimmer(String name, BasketPool basketPool, CubiclePool cubiclePool, int timeForUndress, int timeForSwim, int timeForDress) {
 		this.name = name;
 		this.basketPool = basketPool;
-		System.out.println();
 		this.cubiclePool = cubiclePool;
 		this.timeForUndress = timeForUndress;
 		this.timeForSwim = timeForSwim;
@@ -54,6 +57,7 @@ public class Swimmer extends Action {
 	 */
 	protected ScenarioScheduler createScenarioScheduler(){
 		ScenarioScheduler resultscenarioScheduler = new ScenarioScheduler();
+
 		resultscenarioScheduler.addAction(new TakeResourceAction<>(userBasket, basketPool, name));
 		resultscenarioScheduler.addAction(new TakeResourceAction<>(userCubicle, cubiclePool, name));
 		resultscenarioScheduler.addAction(new UnDressedAction(timeForUndress));
@@ -63,6 +67,7 @@ public class Swimmer extends Action {
 		resultscenarioScheduler.addAction(new DressedAction(timeForDress));
 		resultscenarioScheduler.addAction(new FreeResourceAction<>(userCubicle, cubiclePool, name));
 		resultscenarioScheduler.addAction(new FreeResourceAction<>(userBasket, basketPool, name));
+
 		return resultscenarioScheduler;
 	}
 	
