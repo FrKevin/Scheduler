@@ -1,7 +1,7 @@
 package fr.univ_lille1.fil.coo.pool_scheduler.actions;
 
 /**
- * Represent the base of all actions
+ * Represent the base of all actions 
  *
  */
 public abstract class Action {
