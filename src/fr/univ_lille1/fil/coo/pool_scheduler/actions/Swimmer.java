@@ -23,7 +23,15 @@ public class Swimmer extends Action {
 		
 	protected ScenarioScheduler scenarioScheduler;
 	
-	
+	/**
+	 * Actor specialized in swimming
+	 * @param name
+	 * @param basketPool
+	 * @param cubiclePool
+	 * @param timeForUndress time necessary to remove clothes
+	 * @param timeForSwim time to swim
+	 * @param timeForDress time to dress clothes
+	 */
 	public Swimmer(String name, BasketPool basketPool, CubiclePool cubiclePool, int timeForUndress, int timeForSwim, int timeForDress) {
 		this.name = name;
 		this.basketPool = basketPool;
@@ -39,6 +47,10 @@ public class Swimmer extends Action {
 		this.scenarioScheduler = createScenarioScheduler();
 	}
 		
+	/**
+	 * Method to generate the whole process of the scenario of swimmers
+	 * @return the scenario of the swimmer
+	 */
 	protected ScenarioScheduler createScenarioScheduler(){
 		ScenarioScheduler resultscenarioScheduler = new ScenarioScheduler();
 		resultscenarioScheduler.addAction(new TakeResourceAction<>(userBasket, basketPool));
@@ -53,6 +65,10 @@ public class Swimmer extends Action {
 		return resultscenarioScheduler;
 	}
 	
+	/**
+	 * Put a defined scenario to the swimmer
+	 * @param scenarioScheduler the scenario to affect to the swimmer
+	 */
 	public void setscenarioScheduler(ScenarioScheduler scenarioScheduler) {
 		this.scenarioScheduler = scenarioScheduler;
 	}
