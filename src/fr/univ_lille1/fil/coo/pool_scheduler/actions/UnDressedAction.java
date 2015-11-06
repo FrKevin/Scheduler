@@ -10,7 +10,7 @@ public class UnDressedAction extends ScenarioAction{
 	 * Action to undress clothes
 	 * @param timeToEnd time to totally remove clothes
 	 */
-	public UnDressedAction(int timeToEnd) {
-		super(timeToEnd, "Undressing");
+	public UnDressedAction(int timeToEnd, String author) {
+		super(timeToEnd, author, "Undressing");
 	}
 }

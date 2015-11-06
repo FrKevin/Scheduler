@@ -59,11 +59,11 @@ public class Swimmer extends Action {
 		ScenarioScheduler resultscenarioScheduler = new ScenarioScheduler();
 		resultscenarioScheduler.addAction(new TakeResourceAction<>(userBasket, basketPool));
 		resultscenarioScheduler.addAction(new TakeResourceAction<>(userCubicle, cubiclePool));
-		resultscenarioScheduler.addAction(new UnDressedAction(timeForUndress));
+		resultscenarioScheduler.addAction(new UnDressedAction(timeForUndress, this.name));
 		resultscenarioScheduler.addAction(new FreeResourceAction<>(userCubicle, cubiclePool));
-		resultscenarioScheduler.addAction(new SwimAction(timeForSwim));
+		resultscenarioScheduler.addAction(new SwimAction(timeForSwim, this.name));
 		resultscenarioScheduler.addAction(new TakeResourceAction<Cubicle>(userCubicle, cubiclePool));
-		resultscenarioScheduler.addAction(new DressedAction(timeForDress));
+		resultscenarioScheduler.addAction(new DressedAction(timeForDress, this.name));
 		resultscenarioScheduler.addAction(new FreeResourceAction<>(userCubicle, cubiclePool));
 		resultscenarioScheduler.addAction(new FreeResourceAction<>(userBasket, basketPool));
 		return resultscenarioScheduler;

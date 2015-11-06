@@ -5,7 +5,7 @@ package fr.univ_lille1.fil.coo.pool_scheduler.actions;
  */
 public class SwimAction extends ScenarioAction {
 
-	public SwimAction(int timeToEnd) {
-		super(timeToEnd, "Swiming");
+	public SwimAction(int timeToEnd, String author) {
+		super(timeToEnd, author, "Swiming");
 	}
 }
