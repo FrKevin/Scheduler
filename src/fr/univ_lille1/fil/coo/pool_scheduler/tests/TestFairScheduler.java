@@ -59,9 +59,6 @@ public class TestFairScheduler {
 		assertEquals(fa2, scheduler.getCurrentAction());
 		scheduler.nextAction();
 		assertEquals(fa3, scheduler.getCurrentAction());
-		
-		
-		
 	}
 
 	@Test
