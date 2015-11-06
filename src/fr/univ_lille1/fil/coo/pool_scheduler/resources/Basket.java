@@ -31,4 +31,9 @@ public class Basket implements Resource {
 	public String description() {
 		return description;
 	}
+
+	public List<Clothing> getClothing() {
+		return clothing;
+	}
+	
 }
