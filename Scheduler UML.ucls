@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.8" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.Action" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/Action.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="151" width="183" x="1003" y="441"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.resources.Basket" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/resources/Basket.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="151" width="194" x="210" y="650"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcePool" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/resources/ResourcePool.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="223" width="194" x="739" y="949"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.schedulers.FairScheduler" 
+    project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/schedulers/FairScheduler.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="169" width="198" x="765" y="441"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.resources.BasketPool" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/resources/BasketPool.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="79" width="194" x="699" y="1212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.resources.CubiclePool" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/resources/CubiclePool.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="79" width="194" x="954" y="1212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.schedulers.ScenarioScheduler" 
+    project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/schedulers/ScenarioScheduler.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="79" width="198" x="994" y="949"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.ScenarioAction" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/ScenarioAction.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="115" width="183" x="1956" y="949"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.resources.Cubicle" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/resources/Cubicle.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="115" width="194" x="250" y="949"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.TakeResourceAction" 
+    project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/TakeResourceAction.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="169" width="322" x="1232" y="949"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.FreeResourceAction" 
+    project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/FreeResourceAction.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="169" width="322" x="1594" y="949"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.UnDressedAction" 
+    project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/UnDressedAction.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="79" width="183" x="1845" y="1212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="13" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.resources.Resource" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/resources/Resource.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="79" width="194" x="250" y="1212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="14" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.resources.clothing.Clothing" 
+    project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/resources/clothing/Clothing.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="79" width="229" x="-40" y="949"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.RenderAction" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/RenderAction.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="187" width="183" x="476" y="650"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.Main" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="97" width="151" x="169" y="124"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.Swimmer" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/Swimmer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="259" width="264" x="699" y="650"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.schedulers.SequentialScheduler" 
+    project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/schedulers/SequentialScheduler.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="169" width="198" x="1323" y="441"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.ResourceAction" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/ResourceAction.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="79" width="299" x="1003" y="650"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.DressedAction" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/DressedAction.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="97" width="183" x="2179" y="949"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.ForeseableAction" 
+    project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/ForeseableAction.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="241" width="183" x="1956" y="650"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser" 
+    project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/resources/ResourcefulUser.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="133" width="194" x="484" y="949"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.SwimAction" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/SwimAction.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="79" width="183" x="2068" y="1212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.actions.ActionFinishedException" 
+    project="Scheduler" file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/actions/ActionFinishedException.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="97" width="183" x="570" y="124"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="fr.univ_lille1.fil.coo.pool_scheduler.schedulers.Scheduler" project="Scheduler" 
+    file="/Scheduler/src/fr/univ_lille1/fil/coo/pool_scheduler/schedulers/Scheduler.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="277" width="198" x="1003" y="124"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="26">    
+    <bendpoint x="708" y="949"/>    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="27" name="basketPool"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="30" name="resources"/>      
+      <multiplicity id="31" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <realization id="33">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <association id="34">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="35" name="resource"/>      
+      <multiplicity id="36" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="37">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="38" name="clothing"/>      
+      <multiplicity id="39" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="40">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <realization id="41">    
+    <bendpoint x="219" y="949"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <generalization id="42">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <association id="43">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="44" name="actions"/>      
+      <multiplicity id="45" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="46">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="47">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="48">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="49">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="50">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="51" name="usedResources"/>      
+      <multiplicity id="52" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="53">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <association id="54">    
+    <bendpoint x="963" y="949"/>    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="55" name="cubiclePool"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="57">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="58">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <generalization id="59">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <association id="60">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="61" name="scenarioScheduler"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="63">    
+    <bendpoint x="1332" y="650"/>    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="64">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <association id="65">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="66" name="userCubicle"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="68">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="69">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="70" name="userBasket"/>      
+      <multiplicity id="71" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="72">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="73">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="74">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="75" name="resourcefulUser"/>      
+      <multiplicity id="76" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="77">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="78" name="resourcePool"/>      
+      <multiplicity id="79" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="80">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
