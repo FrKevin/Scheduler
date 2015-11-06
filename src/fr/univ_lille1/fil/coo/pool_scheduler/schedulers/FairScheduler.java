@@ -2,6 +2,10 @@ package fr.univ_lille1.fil.coo.pool_scheduler.schedulers;
 
 import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
 
+/**
+ * Execute all actions following the order
+ *
+ */
 public class FairScheduler extends Scheduler {
 	
 	public int idCurrentAction = 0;	

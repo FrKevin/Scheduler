@@ -10,6 +10,10 @@ public class Basket implements Resource {
 	protected List<Clothing> clothing = new ArrayList<>();
 	protected String description;
 	
+	/**
+	 * Basket where put clothes
+	 * @param description
+	 */
 	public Basket(String description){
 		this.description = description;
 	}
