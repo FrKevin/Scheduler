@@ -43,7 +43,7 @@ public class Swimmer extends Action {
 		
 		scenarios.add(new UnDressedAction(timeForUndress));
 		scenarios.add(new FreeResourceAction<>(userCubicle, cubiclePool));
-		scenarios.add(new ForeseableAction(timeForSwim));
+		scenarios.add(new SwimAction(timeForSwim));
 	}
 	
 	@Override
