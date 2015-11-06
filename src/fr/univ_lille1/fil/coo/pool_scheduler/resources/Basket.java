@@ -5,9 +5,15 @@ import java.util.List;
 
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.clothing.Clothing;
 
-public abstract class Basket implements Resource {
+public class Basket implements Resource {
 	
 	protected List<Clothing> clothing = new ArrayList<>();
+	protected String description;
+	
+	public Basket(String description){
+		this.description = description;
+	}
+	
 	/* Bonus */
 	public void addClothing(Clothing c){
 		clothing.add(c);
@@ -15,5 +21,10 @@ public abstract class Basket implements Resource {
 	
 	public void removeClothing(Clothing c){
 		clothing.remove(c);
+	}
+
+	@Override
+	public String description() {
+		return description;
 	}
 }

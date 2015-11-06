@@ -39,7 +39,7 @@ public abstract class ResourcePool<T extends Resource> {
 	}
 	
 	public void addResource(T r){
-		if(resources.size() < capacity-1) {
+		if(resources.size() < capacity) {
 			resources.add(r);
 		}
 		else{
