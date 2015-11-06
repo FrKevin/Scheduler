@@ -14,21 +14,4 @@ public abstract class ResourceAction<R extends Resource> extends Action {
 		this.resourcePool = resourcePool;
 	}
 	
-	@Override
-	public boolean isReady() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isInProgress() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isFinished() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 }
