@@ -8,14 +8,18 @@ import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
 
 public abstract class Scheduler extends Action {
 	
-	protected List<Action> actions = new ArrayList<>();
+	protected List<Action> actions;
 	protected boolean isReady = true;
 	protected boolean isInit = false;
 	
 	/**
 	 * Create empty Scheduler
 	 */
-	public Scheduler(){}	
+	public Scheduler(){ this(new ArrayList<>()); }	
+	
+	public Scheduler(List<Action> actions) {
+		this.actions = actions;
+	}
 	
 	/**
 	 * Add action
