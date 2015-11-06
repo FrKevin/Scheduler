@@ -7,14 +7,21 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	protected boolean takeResource = false;
+	
+	protected String status = FAIL_STATUS;
+	
+	protected final static String SUCCESS_STATUS = "sucess";
+	
+	protected final static String FAIL_STATUS = "fail";
+
 
 	/**
 	 * Action to affect a ressourcePool to an user
 	 * @param resourcefulUser the user who will have the ressourcePool
 	 * @param resourcePool the ressourcePool to affect to the user
 	 */
-	public TakeResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool) {
-		super(resourcefulUser, resourcePool);
+	public TakeResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool, String name) {
+		super(resourcefulUser, resourcePool, name);
 	}
 	
 	@Override
@@ -32,13 +39,22 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 			try {
 				resource = resourcePool.provideRessource(resource);
 				resourcefulUser.setResource(resource);
-				takeResource = true;
+				setTakeResource(true);
 			} catch (Exception e) {
+			
 			}
 		}
 		else{
-			System.out.println("to take resource from pool " + resourcefulUser.toString() + "... failded");
+			setTakeResource(false);
 		}
+	}
+	
+	protected void setTakeResource(boolean takeResource) {
+		this.takeResource = takeResource;
+		if(!takeResource) {
+			status = FAIL_STATUS;
+		}
+		status = SUCCESS_STATUS;
 	}
 	
 	@Override
@@ -49,5 +65,10 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 	@Override
 	public boolean isFinished() {
 		return takeResource == true && resourcefulUser.getResource() != null;
+	}
+	
+	@Override
+	public String toString() {
+		return name + " trying to take resource from pool " + resourcePool.getFirstRessource().description() + "... " + status;
 	}
 }

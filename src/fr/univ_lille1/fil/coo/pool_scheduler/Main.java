@@ -15,11 +15,11 @@ public class Main {
 	public static void main(String[] args) throws ActionFinishedException {
 		BasketPool baskets = new BasketPool(6);
 		for(int i=0; i<6; i++){
-			baskets.addResource(new Basket("baskets "+ i));
+			baskets.addResource(new Basket("basket"));
 		}
 		CubiclePool cubicles = new CubiclePool(3);
 		for(int i=0; i<3; i++){
-			cubicles.addResource(new Cubicle("cubiclePool "+ i));
+			cubicles.addResource(new Cubicle("cubicle"));
 		}
 		FairScheduler s = new FairScheduler();
 		
@@ -31,10 +31,11 @@ public class Main {
 		s.addAction(new Swimmer("Charlie", baskets, cubicles, 3, 6, 10));
 		s.addAction(new Swimmer("Alexis", baskets, cubicles, 6, 5, 7));
 		int nbSteps = 0;
-		
 		while (!s.isFinished()) {
 			nbSteps++;
 			s.doStep();
+			
+			
 		}
 		System.out.println("Finished in " + nbSteps + " steps");
 	}

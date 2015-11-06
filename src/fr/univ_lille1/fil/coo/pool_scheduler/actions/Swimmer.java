@@ -16,6 +16,7 @@ public class Swimmer extends Action {
 	
 	protected int timeForUndress;
 	protected int timeForSwim;
+	
 	protected int timeForDress;
 	
 	protected ResourcefulUser<Cubicle> userCubicle;
@@ -53,17 +54,34 @@ public class Swimmer extends Action {
 	 */
 	protected ScenarioScheduler createScenarioScheduler(){
 		ScenarioScheduler resultscenarioScheduler = new ScenarioScheduler();
-		resultscenarioScheduler.addAction(new TakeResourceAction<>(userBasket, basketPool));
-		resultscenarioScheduler.addAction(new TakeResourceAction<>(userCubicle, cubiclePool));
+		resultscenarioScheduler.addAction(new TakeResourceAction<>(userBasket, basketPool, name));
+		resultscenarioScheduler.addAction(new TakeResourceAction<>(userCubicle, cubiclePool, name));
 		resultscenarioScheduler.addAction(new UnDressedAction(timeForUndress));
-		resultscenarioScheduler.addAction(new FreeResourceAction<>(userCubicle, cubiclePool));
+		resultscenarioScheduler.addAction(new FreeResourceAction<>(userCubicle, cubiclePool, name));
 		resultscenarioScheduler.addAction(new SwimAction(timeForSwim));
-		resultscenarioScheduler.addAction(new TakeResourceAction<Cubicle>(userCubicle, cubiclePool));
+		resultscenarioScheduler.addAction(new TakeResourceAction<Cubicle>(userCubicle, cubiclePool, name));
 		resultscenarioScheduler.addAction(new DressedAction(timeForDress));
-		resultscenarioScheduler.addAction(new FreeResourceAction<>(userCubicle, cubiclePool));
-		resultscenarioScheduler.addAction(new FreeResourceAction<>(userBasket, basketPool));
+		resultscenarioScheduler.addAction(new FreeResourceAction<>(userCubicle, cubiclePool, name));
+		resultscenarioScheduler.addAction(new FreeResourceAction<>(userBasket, basketPool, name));
 		return resultscenarioScheduler;
 	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public int getTimeForUndress() {
+		return timeForUndress;
+	}
+
+	public int getTimeForSwim() {
+		return timeForSwim;
+	}
+
+	public int getTimeForDress() {
+		return timeForDress;
+	}
+
 	
 	/**
 	 * Put a defined scenario to the swimmer
@@ -90,6 +108,8 @@ public class Swimmer extends Action {
 	
 	@Override
 	public void doStep() {
+		System.out.println(name + "'s turn");
 		scenarioScheduler.doStep();
+		System.out.println(scenarioScheduler.getCurrentAction());
 	}
 }

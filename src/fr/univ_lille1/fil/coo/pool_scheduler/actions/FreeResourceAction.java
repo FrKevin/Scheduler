@@ -13,8 +13,8 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 	 * @param resourcefulUser  the user to free to the ressourcePool
 	 * @param resourcePool the ressourcePool to remove from the user
 	 */
-	public FreeResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool) {
-		super(resourcefulUser, resourcePool);
+	public FreeResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool, String name) {
+		super(resourcefulUser, resourcePool, name);
 	}
 
 	@Override
@@ -23,7 +23,9 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 			resourcePool.freeRessource(resourcefulUser.getResource());
 			resourcefulUser.resetResource();
 			freeRessource = true;
+			
 		}
+		
 	}
 
 	@Override
@@ -41,5 +43,8 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 		return freeRessource == true && resourcefulUser.getResource() == null;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return name + " freeing resource to take resource from pool " + resourcePool.getFirstRessource().description();
+	}
 }

@@ -9,4 +9,6 @@ public class UnDressedAction extends ScenarioAction{
 	public UnDressedAction(int timeToEnd) {
 		super(timeToEnd, "Undressing");
 	}
+	
+
 }

@@ -17,6 +17,11 @@ public abstract class ScenarioAction extends ForeseableAction {
 	@Override
 	public void doStep() {
 		super.doStep();
-		System.out.println(message +" ("+time+"/"+timeToEnd+")");
+		//System.out.println(this);
+	}
+	
+	@Override
+	public String toString() {
+		return message +" ("+time+"/"+timeToEnd+")";
 	}
 }
