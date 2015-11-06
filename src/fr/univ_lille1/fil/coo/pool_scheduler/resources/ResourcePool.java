@@ -23,7 +23,7 @@ public abstract class ResourcePool<T extends Resource> {
 			if(usedResources.contains(r)) {
 				throw new NoSuchElementException("This ressource is used");
 			}
-			throw new IllegalArgumentException("This ressource not exist");
+			throw new IllegalArgumentException("This ressource doesn't exist");
 		}
 	}
 	
@@ -34,7 +34,7 @@ public abstract class ResourcePool<T extends Resource> {
 			resources.remove(index);
 		}
 		else{
-			throw new IllegalArgumentException("This re");
+			throw new IllegalArgumentException("This ressource doesn't exists");
 		}
 	}
 	
