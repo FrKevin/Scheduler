@@ -76,6 +76,6 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	@Override
 	public String toString() {
-		return name + " trying to take resource from pool " + resourcePool.getFirstRessource().description() + "... ";
+		return name + " trying to take resource from " + resourcePool + "... ";
 	}
 }

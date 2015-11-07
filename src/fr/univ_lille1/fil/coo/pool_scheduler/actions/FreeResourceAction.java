@@ -50,6 +50,6 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	@Override
 	public String toString() {
-		return name + " freeing resource to take resource from pool " + resourcePool.getFirstRessource().description();
+		return name + " freeing resource to take resource " + resourcePool;
 	}
 }

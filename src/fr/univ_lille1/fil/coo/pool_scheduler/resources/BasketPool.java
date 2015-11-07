@@ -9,4 +9,9 @@ public class BasketPool extends ResourcePool<Basket> {
 	public BasketPool(int capacity) {
 		super(capacity);
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + " basket";
+	}
 }

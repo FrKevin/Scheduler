@@ -9,5 +9,10 @@ public class CubiclePool extends ResourcePool<Cubicle> {
 	public CubiclePool(int capacity) {
 		super(capacity);
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + " cubicle";
+	}
 
 }
