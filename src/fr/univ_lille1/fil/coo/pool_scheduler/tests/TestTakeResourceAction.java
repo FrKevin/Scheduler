@@ -50,7 +50,13 @@ public class TestTakeResourceAction {
 		assertTrue(takeResourceAction.isFinished());
 		assertFalse(takeResourceAction.isInProgress());
 	}
-
+	
+	@Test(expected = IllegalAccessError.class)
+	public void testDoStepWidthIllegalAccessError() {
+		takeResourceAction.doStep();
+		takeResourceAction.doStep();
+	}
+	
 	@Test
 	public void testDoStep() {
 		assertTrue(takeResourceAction.isReady());
@@ -58,7 +64,7 @@ public class TestTakeResourceAction {
 		assertFalse(takeResourceAction.isFinished());
 		
 		takeResourceAction.doStep();
-		
+
 		assertFalse(takeResourceAction.isReady());
 		assertTrue(takeResourceAction.isFinished());
 		assertFalse(takeResourceAction.isInProgress());
