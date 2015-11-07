@@ -20,6 +20,7 @@ public abstract class ScenarioAction extends ForeseableAction {
 	@Override
 	public void doStep() {
 		super.doStep();
+		System.out.println(this);
 	}
 	
 	@Override

@@ -28,7 +28,7 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 			resourcePool.freeRessource(resourcefulUser.getResource());
 			resourcefulUser.resetResource();
 			freeRessource = true;
-			
+			System.out.println(this);
 		}
 		
 	}

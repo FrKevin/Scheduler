@@ -30,6 +30,7 @@ public class Main {
 		s.addAction(new Swimmer("Alexis", baskets, cubicles, 6, 5, 7));
 		int nbSteps = 0;
 		while (!s.isFinished()) {
+			System.out.println(((Swimmer) s.getCurrentAction()).getName() + "'s turn, step " + nbSteps);
 			nbSteps++;
 			s.doStep();
 			

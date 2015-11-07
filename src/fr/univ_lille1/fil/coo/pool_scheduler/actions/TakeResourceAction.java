@@ -15,11 +15,9 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	protected boolean takeResource = false;
 	
-	protected String status = FAIL_STATUS;
+	protected final static String SUCCESS_STATUS = "success";
 	
-	protected final static String SUCCESS_STATUS = "sucess";
-	
-	protected final static String FAIL_STATUS = "fail";
+	protected final static String FAIL_STATUS = "failed";
 
 
 	/**
@@ -41,27 +39,29 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 		if(resourcefulUser.getResource() != null ){
 			throw new IllegalAccessError("The resource of user is not null");
 		}
+		System.out.print(this);
 		R resource = resourcePool.getFirstRessource();
 		if(resource != null){
 			try {
 				resource = resourcePool.provideRessource(resource);
 				resourcefulUser.setResource(resource);
-				setTakeResource(true);
+				this.takeResource = true;
+				System.out.println(SUCCESS_STATUS);
 			} catch (Exception e) {
-			
+				this.takeResource = false;
+				System.out.println(FAIL_STATUS);
+
 			}
-		}
-		else{
-			setTakeResource(false);
 		}
 	}
 	
 	protected void setTakeResource(boolean takeResource) {
 		this.takeResource = takeResource;
-		if(!takeResource) {
-			status = FAIL_STATUS;
-		}
-		status = SUCCESS_STATUS;
+	}
+	
+	
+	protected String getStatus() {
+		return isFinished() ? SUCCESS_STATUS : FAIL_STATUS;
 	}
 	
 	@Override
@@ -76,6 +76,6 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
 	@Override
 	public String toString() {
-		return name + " trying to take resource from pool " + resourcePool.getFirstRessource().description() + "... " + status;
+		return name + " trying to take resource from pool " + resourcePool.getFirstRessource().description() + "... ";
 	}
 }

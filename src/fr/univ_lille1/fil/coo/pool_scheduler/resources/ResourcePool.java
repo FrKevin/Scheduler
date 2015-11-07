@@ -32,10 +32,12 @@ public abstract class ResourcePool<T extends Resource> {
 			return resources.get(index);
 		}
 		else {
+
 			if(usedResources.contains(r)) {
 				throw new NoSuchElementException("This ressource is used");
 			}
 			throw new IllegalArgumentException("This ressource doesn't exist");
+
 		}
 	}
 	

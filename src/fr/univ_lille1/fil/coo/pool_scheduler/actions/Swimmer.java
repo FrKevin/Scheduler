@@ -113,8 +113,6 @@ public class Swimmer extends Action {
 	
 	@Override
 	public void doStep() {
-		System.out.println(name + "'s turn");
 		scenarioScheduler.doStep();
-		System.out.println(scenarioScheduler.getCurrentAction());
 	}
 }
