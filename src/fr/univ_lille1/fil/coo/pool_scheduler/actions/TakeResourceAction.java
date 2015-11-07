@@ -7,9 +7,9 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 
 /**
  * 
- * Class to put a ressource to an user
+ * Class to put a resource to an user
  *
- * @param <R> type of the ressource
+ * @param <R> type of the resource
  */
 public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
@@ -21,9 +21,10 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 
 
 	/**
-	 * Action to affect a ressourcePool to an user
-	 * @param resourcefulUser the user who will have the ressourcePool
-	 * @param resourcePool the ressourcePool to affect to the user
+	 * Action to give a resourcePool to an user
+	 * @param resourcefulUser the user who will have the resourcePool
+	 * @param resourcePool the resourcePool to affect to the user
+	 * @param name Name of the action's user
 	 */
 	public TakeResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool, String name) {
 		super(resourcefulUser, resourcePool, name);
@@ -40,10 +41,10 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 			throw new IllegalAccessError("The resource of user is not null");
 		}
 		System.out.print(this);
-		R resource = resourcePool.getFirstRessource();
+		R resource = resourcePool.getFirstResource();
 		
 		try {
-			resource = resourcePool.provideRessource(resource);
+			resource = resourcePool.provideResource(resource);
 			resourcefulUser.setResource(resource);
 			this.takeResource = true;
 			System.out.println(SUCCESS_STATUS);
@@ -54,11 +55,18 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 		
 	}
 	
+	/**
+	 * Define if the resource is taken or not
+	 * @param takeResource the status of the resource (true if taken, false if not)
+	 */
 	protected void setTakeResource(boolean takeResource) {
 		this.takeResource = takeResource;
 	}
 	
-	
+	/**
+	 * 
+	 * @return the actual status of the action
+	 */
 	protected String getStatus() {
 		return isFinished() ? SUCCESS_STATUS : FAIL_STATUS;
 	}

@@ -5,18 +5,19 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcePool;
 import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 
 /**
- * Class to free a ressource to a user
+ * Class to free a resource to a user
  *
- * @param <R> type of ressource to manage
+ * @param <R> type of resource to manage
  */
 public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 	
-	public boolean freeRessource = false;
+	public boolean freeResource = false;
 	
 	/**
-	 * Init an action with the goal to free the ressourcePool to the specified user
-	 * @param resourcefulUser  the user to free to the ressourcePool
-	 * @param resourcePool the ressourcePool to remove from the user
+	 * Init an action with the goal to free the resourcePool to the specified user
+	 * @param resourcefulUser  the user to free to the resourcePool
+	 * @param resourcePool the resourcePool to remove from the user
+	 * @param name Name of the action's user
 	 */
 	public FreeResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool, String name) {
 		super(resourcefulUser, resourcePool, name);
@@ -25,9 +26,9 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 	@Override
 	public void doStep() {
 		if(resourcefulUser.getResource() != null) {
-			resourcePool.freeRessource(resourcefulUser.getResource());
+			resourcePool.freeResource(resourcefulUser.getResource());
 			resourcefulUser.resetResource();
-			freeRessource = true;
+			freeResource = true;
 			System.out.println(this);
 		}
 		
@@ -35,7 +36,7 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 
 	@Override
 	public boolean isReady() {
-		return freeRessource == false;
+		return freeResource == false;
 	}
 
 	@Override
@@ -45,7 +46,7 @@ public class FreeResourceAction<R extends Resource> extends ResourceAction<R>{
 
 	@Override
 	public boolean isFinished() {
-		return freeRessource == true && resourcefulUser.getResource() == null;
+		return freeResource == true && resourcefulUser.getResource() == null;
 	}
 	
 	@Override

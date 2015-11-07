@@ -30,9 +30,9 @@ public class Swimmer extends Action {
 	
 	/**
 	 * Actor specialized in swimming
-	 * @param name
-	 * @param basketPool
-	 * @param cubiclePool
+	 * @param name the name of the swimmer
+	 * @param basketPool the basketPool to use
+	 * @param cubiclePool the cubiclePool to use
 	 * @param timeForUndress time necessary to remove clothes
 	 * @param timeForSwim time to swim
 	 * @param timeForDress time to dress clothes
@@ -71,18 +71,34 @@ public class Swimmer extends Action {
 		return resultscenarioScheduler;
 	}
 	
+	/**
+	 * 
+	 * @return the name of the swimmer
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * 
+	 * @return the time to be undressed
+	 */
 	public int getTimeForUndress() {
 		return timeForUndress;
 	}
 
+	/**
+	 * 
+	 * @return the time to swim
+	 */
 	public int getTimeForSwim() {
 		return timeForSwim;
 	}
 
+	/**
+	 * 
+	 * @return the time to dress
+	 */
 	public int getTimeForDress() {
 		return timeForDress;
 	}

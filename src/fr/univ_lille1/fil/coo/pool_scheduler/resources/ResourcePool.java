@@ -7,12 +7,12 @@ import java.util.NoSuchElementException;
 public abstract class ResourcePool<T extends Resource> {
 	
 	/**
-	 * The general ressource for pool
+	 * The general resource for pool
 	 */
 	protected List<T> availableResource = new ArrayList<>();
 	
 	/**
-	 * The used ressource
+	 * The used resource
 	 */
 	protected List<T> usedResources = new ArrayList<>();
 	
@@ -25,7 +25,7 @@ public abstract class ResourcePool<T extends Resource> {
 		this.capacity = capacity;
 	}
 	
-	public T provideRessource(T r){
+	public T provideResource(T r){
 		int index = availableResource.indexOf(r);
 		if(index > -1){
 			T resource = availableResource.remove(index);
@@ -35,21 +35,21 @@ public abstract class ResourcePool<T extends Resource> {
 		else {
 
 			if(usedResources.contains(r)) {
-				throw new NoSuchElementException("This ressource is used");
+				throw new NoSuchElementException("This resource is used");
 			}
-			throw new IllegalArgumentException("This ressource doesn't exist");
+			throw new IllegalArgumentException("This resource doesn't exist");
 
 		}
 	}
 	
-	public void freeRessource(T r){
+	public void freeResource(T r){
 		int index = usedResources.indexOf(r);
 		if(index > -1 ){
 			availableResource.add(usedResources.remove(index));
-			System.out.println("This ressource is unlocked.");
+			System.out.println("This resource is unlocked.");
 		}
 		else{
-			System.out.println("This ressource is not used.");
+			System.out.println("This resource is not used.");
 		}
 	}
 	
@@ -62,7 +62,7 @@ public abstract class ResourcePool<T extends Resource> {
 		}
 	}
 	
-	public T getFirstRessource(){
+	public T getFirstResource(){
 		if(availableResource.size() > 0 )
 			return availableResource.get(0);
 		return null;

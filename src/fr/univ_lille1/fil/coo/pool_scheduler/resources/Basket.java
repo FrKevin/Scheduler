@@ -11,8 +11,8 @@ public class Basket implements Resource {
 	protected String description;
 	
 	/**
-	 * Basket where put clothes
-	 * @param description
+	 * Create a basket with descripton
+	 * @param description text to display during the action
 	 */
 	public Basket(String description){
 		this.description = description;

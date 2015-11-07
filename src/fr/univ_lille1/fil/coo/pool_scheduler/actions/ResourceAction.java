@@ -6,8 +6,7 @@ import fr.univ_lille1.fil.coo.pool_scheduler.resources.ResourcefulUser;
 
 /**
  * Base of an user's action using a resource
- *
- * @param <R>
+ * @param <R> type of the resource to use
  */
 public abstract class ResourceAction<R extends Resource> extends Action {
 
@@ -16,9 +15,10 @@ public abstract class ResourceAction<R extends Resource> extends Action {
 
 	protected String name;
 	/**
-	 * Constructor of RessourceAction
+	 * Constructor of ResourceAction
 	 * @param resourcefulUser User who's doing action
-	 * @param resourcePool ressource used for the action
+	 * @param resourcePool resource used for the action
+	 * @param name Name of the action's user
 	 */
 	public ResourceAction(ResourcefulUser<R> resourcefulUser, ResourcePool<R> resourcePool, String name) {
 		this.resourcefulUser = resourcefulUser;

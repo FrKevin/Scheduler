@@ -3,7 +3,7 @@ package fr.univ_lille1.fil.coo.pool_scheduler.schedulers;
 import fr.univ_lille1.fil.coo.pool_scheduler.actions.Action;
 
 /**
- * Execute a step of an action and go to another action each turn
+ * Execute one step of an action and switching to another turn by turn
  *
  */
 public class SequentialScheduler extends Scheduler {

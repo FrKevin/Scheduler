@@ -48,29 +48,29 @@ public class TestResourcePool {
 	}
 	
 	@Test
-	public void testProvideRessource() {
-		Resource r = resourcePool.provideRessource(resourcePool.getFirstRessource());
+	public void testProvideResource() {
+		Resource r = resourcePool.provideResource(resourcePool.getFirstResource());
 		assertNotNull(r);
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void testProvideRessourceWidthIllegalArgumentException() {
-		resourcePool.provideRessource(new Cubicle("cubiclePool 100"));
+	public void testProvideResourceWidthIllegalArgumentException() {
+		resourcePool.provideResource(new Cubicle("cubiclePool 100"));
 	}
 	
 	@Test(expected = NoSuchElementException.class)
-	public void testProvideRessourceWidthNoSuchElementException() {
-		Cubicle r = resourcePool.provideRessource(resourcePool.getFirstRessource());
+	public void testProvideResourceWidthNoSuchElementException() {
+		Cubicle r = resourcePool.provideResource(resourcePool.getFirstResource());
 		assertNotNull(r);
-		resourcePool.provideRessource(r);
+		resourcePool.provideResource(r);
 	}
 	
 	@Test
-	public void testFreeRessource() {
-		Cubicle r = resourcePool.provideRessource(resourcePool.getFirstRessource());
+	public void testFreeResource() {
+		Cubicle r = resourcePool.provideResource(resourcePool.getFirstResource());
 		assertNotNull(r);
 		assertTrue(resourcePool.getUsedResources().size() == 1);
-		resourcePool.freeRessource(r);
+		resourcePool.freeResource(r);
 		assertTrue(resourcePool.getUsedResources().size() == 0);
 	}
 

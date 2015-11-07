@@ -20,9 +20,5 @@ public abstract class Action {
 	 */
 	public abstract boolean isFinished();
 	
-	
-	/**
-	 * @return execute action of the class
-	 */
 	public abstract void doStep();
 }
