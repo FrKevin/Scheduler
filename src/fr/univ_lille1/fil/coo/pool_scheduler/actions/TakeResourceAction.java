@@ -41,18 +41,17 @@ public class TakeResourceAction<R extends Resource> extends ResourceAction<R>{
 		}
 		System.out.print(this);
 		R resource = resourcePool.getFirstRessource();
-		if(resource != null){
-			try {
-				resource = resourcePool.provideRessource(resource);
-				resourcefulUser.setResource(resource);
-				this.takeResource = true;
-				System.out.println(SUCCESS_STATUS);
-			} catch (Exception e) {
-				this.takeResource = false;
-				System.out.println(FAIL_STATUS);
-
-			}
+		
+		try {
+			resource = resourcePool.provideRessource(resource);
+			resourcefulUser.setResource(resource);
+			this.takeResource = true;
+			System.out.println(SUCCESS_STATUS);
+		} catch (Exception e) {
+			this.takeResource = false;
+			System.out.println(FAIL_STATUS);
 		}
+		
 	}
 	
 	protected void setTakeResource(boolean takeResource) {
