@@ -41,33 +41,26 @@ public class TestTakeResourceAction {
 		assertTrue(takeResourceAction.isReady());
 		assertFalse(takeResourceAction.isInProgress());
 		assertFalse(takeResourceAction.isFinished());
-		
-		takeResourceAction.doStep();
-		
-		assertFalse(takeResourceAction.isReady());
-		assertTrue(takeResourceAction.isInProgress());
-		assertFalse(takeResourceAction.isFinished());
-		
-	}
-
-	@Test
-	public void testIsInProgress() {
-		fail("Not yet implemented");
 	}
 
 	@Test
 	public void testIsFinished() {
-		fail("Not yet implemented");
+		takeResourceAction.doStep();
+		assertFalse(takeResourceAction.isReady());
+		assertTrue(takeResourceAction.isFinished());
+		assertFalse(takeResourceAction.isInProgress());
 	}
 
 	@Test
 	public void testDoStep() {
-		fail("Not yet implemented");
+		assertTrue(takeResourceAction.isReady());
+		assertFalse(takeResourceAction.isInProgress());
+		assertFalse(takeResourceAction.isFinished());
+		
+		takeResourceAction.doStep();
+		
+		assertFalse(takeResourceAction.isReady());
+		assertTrue(takeResourceAction.isFinished());
+		assertFalse(takeResourceAction.isInProgress());
 	}
-
-	@Test
-	public void testTakeResourceAction() {
-		fail("Not yet implemented");
-	}
-
 }
